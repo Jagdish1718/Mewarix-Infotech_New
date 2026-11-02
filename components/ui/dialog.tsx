@@ -1,0 +1,4 @@
+'use client';
+import * as React from 'react';import * as D from '@radix-ui/react-dialog';import {X} from 'lucide-react';import {cn} from '@/lib/utils';
+export const Dialog=D.Root;export const DialogTrigger=D.Trigger;export const DialogClose=D.Close;export const DialogTitle=D.Title;
+export const DialogContent=({className,children,...p}:React.ComponentProps<typeof D.Content>)=><D.Portal><D.Overlay className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm data-[state=open]:animate-in data-[state=open]:fade-in-0"/><D.Content className={cn('fixed right-0 top-0 z-50 h-full w-80 max-w-[88vw] border-l bg-popover p-6 shadow-2xl data-[state=open]:animate-in data-[state=open]:slide-in-from-right',className)} {...p}>{children}<D.Close className="absolute right-4 top-4 rounded-md p-1 hover:bg-white/10" aria-label="Close"><X size={20}/></D.Close></D.Content></D.Portal>;

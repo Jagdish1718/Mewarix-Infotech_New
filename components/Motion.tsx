@@ -1,0 +1,4 @@
+'use client';
+import {motion,MotionConfig} from 'motion/react';
+export const MotionProvider=({children}:{children:React.ReactNode})=><MotionConfig reducedMotion="user">{children}</MotionConfig>;
+export const Reveal=({children,delay=0,className}:{children:React.ReactNode;delay?:number;className?:string})=><motion.div className={className} initial={{opacity:0,y:24}} whileInView={{opacity:1,y:0}} viewport={{once:true,margin:'-60px'}} transition={{duration:.55,delay,ease:'easeOut'}}>{children}</motion.div>;
