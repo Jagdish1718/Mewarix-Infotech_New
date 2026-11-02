@@ -1,0 +1,7 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+@layer base{:root{--background:214 69% 9%;--foreground:0 0% 100%;--card:214 67% 14%;--card-foreground:0 0% 100%;--popover:214 67% 12%;--primary:221 83% 53%;--primary-foreground:0 0% 100%;--secondary:214 50% 18%;--secondary-foreground:0 0% 100%;--muted:214 50% 18%;--muted-foreground:215 20% 78%;--accent:214 50% 20%;--accent-foreground:0 0% 100%;--destructive:0 72% 55%;--border:214 40% 22%;--input:214 40% 24%;--ring:188 86% 53%;--radius:.75rem}
+*{@apply border-border}body{@apply bg-background text-foreground antialiased}h1,h2,h3{@apply tracking-tight}}
+.wrap{@apply mx-auto max-w-6xl px-5}.sec{@apply py-20}
+.card{@apply rounded-2xl border border-border bg-card/70 p-6 text-card-foreground shadow-xl shadow-black/20 transition hover:border-primary/50}
+.btn-p{@apply inline-flex h-11 items-center justify-center rounded-lg bg-primary px-6 text-sm font-semibold text-white hover:bg-primary/90}
+.btn-s{@apply inline-flex h-11 items-center justify-center rounded-lg border border-white/20 px-6 text-sm font-semibold hover:bg-white/10}

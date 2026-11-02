@@ -1,0 +1,6 @@
+import Link from 'next/link';import Cta,{Hero} from '@/components/Cta';import {meta} from '@/lib/seo';import {services} from '@/lib/site';
+export const metadata=meta('Software Development & AI Services | Mewarix Infotech','Custom software, CRM, AI automation, web, API and SaaS development services from Mewarix Infotech.','/services');
+export default function Services(){return <><Hero h="Technology Solutions Designed Around Your Business" p="Five focused service areas covering software, AI, web, APIs and SaaS."/>
+<div className="wrap space-y-6 py-12">{services.map(s=><section key={s.slug} className="card"><h2 className="text-2xl font-bold">{s.name}</h2><p className="mt-2 text-mist">{s.desc}</p>
+<div className="mt-4 grid gap-4 md:grid-cols-3"><div><h3 className="font-semibold text-cyan">Problems solved</h3><ul className="mt-1 text-sm text-mist">{s.problems.map(x=><li key={x}>• {x}</li>)}</ul></div><div><h3 className="font-semibold text-cyan">Included</h3><ul className="mt-1 text-sm text-mist">{s.features.slice(0,5).map(x=><li key={x}>• {x}</li>)}</ul></div><div><h3 className="font-semibold text-cyan">Technologies</h3><p className="mt-1 text-sm text-mist">{s.tech.join(' · ')}</p></div></div>
+<Link href={`/services/${s.slug}`} className="mt-4 inline-block font-semibold text-cyan">{s.cta} →</Link></section>)}</div><Cta/></>}

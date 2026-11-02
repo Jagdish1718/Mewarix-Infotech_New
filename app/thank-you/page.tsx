@@ -1,0 +1,3 @@
+import Link from 'next/link';import {meta} from '@/lib/seo';
+export const metadata={...meta('Thank You | Mewarix Infotech','Your enquiry has been submitted.','/thank-you'),robots:{index:false}};
+export default function Thanks(){return <div className="wrap py-24 text-center"><h1 className="text-4xl font-bold">Thank You for Contacting Mewarix Infotech!</h1><p className="mx-auto mt-4 max-w-xl text-mist">Your enquiry has been successfully submitted. We will review your requirements and get back to you within one business day.</p><div className="mt-8 flex justify-center gap-3"><Link href="/" className="btn-p">Back to Homepage</Link><Link href="/services" className="btn-s">Explore Services</Link></div></div>}
